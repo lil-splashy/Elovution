@@ -1,11 +1,22 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
+import {Route, Switch} from 'react-router-dom'
+import Home from './Home'
+import Stream from './Stream'
+import elotracker from './elotracker'
+import login from './login'
 
 class App extends React.Component {
     render () {
         return (
-            <h1> hello world</h1>
+            <div>
+                <switch>
+                    <Route exact path='/' Component={Home} />
+                    <Route exact path='/stream' Component={Stream} />
+                    <Route exact path='/elo-tracker' Component={elotracker} />
+                    <Route exact path='/login' Component={login} />
+
+                </switch>
+            </div>
         )
     }
 }

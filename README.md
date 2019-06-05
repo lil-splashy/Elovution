@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Remastering Project 3 react app
 
-Things you may want to cover:
 
-* Ruby version
+    MVP
 
-* System dependencies
 
-* Configuration
+User Login Integration 
+posting comment features 
 
-* Database creation
+Pulling from External Riotgames API
+Displaying Summoner Rank from Twitch Livestreams
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+    NICE TO HAVE
+Able to search through Twitch Streams
+Beautiful UX
 
-* ...
