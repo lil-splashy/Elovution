@@ -13,6 +13,7 @@ class App extends React.Component {
                     <Route exact path='/' Component={Home} />
                     <Route exact path='/stream' Component={Stream} />
                     <Route exact path='/elo-tracker' Component={elotracker} />
+                    <Route exact path='/posts' Component={post} />
                     <Route exact path='/login' Component={login} />
 
                 </switch>
@@ -22,4 +23,4 @@ class App extends React.Component {
 }
 
 
-export default App
+export default App;
