@@ -4,20 +4,23 @@ import Home from './Home'
 import Twitch from './Twitch'
 import elotracker from './elotracker'
 import Login from './login'
+import Post from './Post'
 import ReactPlayer from 'react-player'
 
 
 class App extends React.Component {
     render () {
         return (
-            
+
             <div>
+                <h1>Welcome to elo tracker</h1>
                 <Switch>
-                    <Route exact path='/' Component={Home} />
-                    <Route exact path='/twitch' Component={Twitch} />
-                    <Route exact path='/elo-tracker' Component={elotracker} />
+                    
+                    <Route exact path='/twitch' conponent={Twitch } />
+                    <Route exact path='/elo-tracker' component={elotracker} />
                     <Route exact path='/posts' Component={Post} />
-                    <Route exact path='/login' Component={Login} />
+                    <Route exact path='/login' component={Login} />
+                    <Route exact path='/' component={Home} />
                 </Switch>
             </div>
 

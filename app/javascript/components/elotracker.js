@@ -23,7 +23,6 @@ class elotracker extends React.Component {
                 this.getSummoner(data.id);
             });
     }
-
     getSummoner = async (summonerID) => {
         console.log(summonerID);
         const searchURL = await `https://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=RGAPI-8e62ff29-d636-45c8-80a5-ab4149b7e68a`
@@ -41,12 +40,21 @@ class elotracker extends React.Component {
                 });
             });
     }
-
-
-
     render() {
         return (
+        <body>
             <h1>this is the elo-tracker page</h1>
+            <div>
+                <SummonerSearchForm callSummoner={this.callSummoner} name="Access-Control-Allow-Origin"></SummonerSearchForm>
+                <h1>looking at {this.state.summoner}</h1>
+                <p>
+                    rank: {this.state.tier} {this.state.rank}<br />
+                    wins: {this.state.wins}<br />
+                    losses: {this.state.losses}<br />
+                    progress through rank: {this.state.points} (qualify for promotional series at 100)
+                </p>
+            </div>
+        </body>
         )
     }
 }

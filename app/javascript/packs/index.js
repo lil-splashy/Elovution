@@ -10,8 +10,8 @@ import App from '../components/App'
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Router>
-          <Route path='/' component={App} />
+          <App />
     </Router>,
-    document.body.appendchild(document.createElement('div')),
+    document.body.appendChild(document.createElement('div')),
   )
 })
