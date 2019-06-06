@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class Stream extends React.Component {
+class Twitch extends React.Component {
     render() {
         return (
             <h1>this is the Stream page</h1>
@@ -9,4 +9,4 @@ class Stream extends React.Component {
     }
 }
 
-export default Stream;
+export default Twitch;

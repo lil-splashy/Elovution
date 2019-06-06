@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'pages/index'
-  match '*path', to 'pages#index', via: :all 
+  root 'pages#index'
+  match '*path', to: 'pages#index', via: :all 
 end

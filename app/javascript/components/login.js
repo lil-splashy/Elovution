@@ -31,10 +31,10 @@ class Login extends React.Component {
             console.log(err);
         }
     }
-}
+
     render() {
         return (
-            <h1>this is the home page</h1>
+            <div>this is the login page</div>
         )
     }
 }
