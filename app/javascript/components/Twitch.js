@@ -1,10 +1,10 @@
 import React from 'react'
-
+import ReactPlayer from 'react-player'
 
 class Twitch extends React.Component {
     render() {
         return (
-            <h1>this is the Stream page</h1>
+            <ReactPlayer url='twitch.tv/riotgames' />
         )
     }
 }

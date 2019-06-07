@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class elotracker extends React.Component {
+class Elotracker extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -60,4 +60,4 @@ class elotracker extends React.Component {
 }
 
 
-export default elotracker;
+export default Elotracker;
