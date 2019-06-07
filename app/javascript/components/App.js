@@ -1,7 +1,6 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 import Home from './Home'
-import Twitch from './Twitch'
 import Elotracker from './Elotracker'
 import Login from './login'
 import Post from './Post'
@@ -26,7 +25,7 @@ class App extends React.Component {
     }
     render () {
         return (
-        <body>
+        <div>
                 <h1>Welcome to Elovution</h1>
             <nav>
                 <a href='/login'>Login</a>
@@ -35,14 +34,14 @@ class App extends React.Component {
             <div>
                 <Switch>
                     <Route exact path='/elo-tracker' component={Elotracker} />
-                    <Route exact path='/posts' component={Post} />
+                    {/* <Route exact path='/posts' component={Post} /> */}
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/' component={Home} />
                 </Switch>
             </div>
                 <Elotracker />
                 <Post />
-        </body>
+        </div>
         )
     }
 }

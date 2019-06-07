@@ -1,4 +1,6 @@
 import React from 'react'
+import SummonerSearchForm from './SummonerSearchForm'
+
 
 
 class Elotracker extends React.Component {
@@ -15,7 +17,7 @@ class Elotracker extends React.Component {
     }
     callSummoner = async (formData) => {
         console.log(formData)
-        const searchURL = await `https://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${formData.search}?api_key=RGAPI-8e62ff29-d636-45c8-80a5-ab4149b7e68a`
+        const searchURL = await `https://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${formData.search}?api_key=RGAPI-969673b3-489e-4bee-98a4-db28d5afdb8f`
         await fetch(searchURL)
             .then((response) => response.json())
             .then((data) => {
@@ -25,7 +27,7 @@ class Elotracker extends React.Component {
     }
     getSummoner = async (summonerID) => {
         console.log(summonerID);
-        const searchURL = await `https://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=RGAPI-8e62ff29-d636-45c8-80a5-ab4149b7e68a`
+        const searchURL = await `https://cors-anywhere.herokuapp.com/https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerID}?api_key=RGAPI-969673b3-489e-4bee-98a4-db28d5afdb8f`
         await fetch(searchURL)
             .then((response) => response.json())
             .then((data) => {
@@ -42,7 +44,7 @@ class Elotracker extends React.Component {
     }
     render() {
         return (
-        <body>
+        <div>
             <h1>this is the elo-tracker page</h1>
             <div>
                 <SummonerSearchForm callSummoner={this.callSummoner} name="Access-Control-Allow-Origin"></SummonerSearchForm>
@@ -54,7 +56,7 @@ class Elotracker extends React.Component {
                     progress through rank: {this.state.points} (qualify for promotional series at 100)
                 </p>
             </div>
-        </body>
+        </div>
         )
     }
 }

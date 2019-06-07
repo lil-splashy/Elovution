@@ -1,19 +1,17 @@
-import React from 'react'
-
 
 import React, { Component } from 'react';
 
 const Post = (props) => {
     console.log(props);
-    const postList = props.posts.map((Posts) => {
+    const postList = props.post.map((Post) => {
         return (
             <ul>
-                <li key={Posts._id}>
-                    <span>{Posts.title}</span><br />
-                    <span>{Posts.date}</span><br />
-                    <span>{Posts.body}</span><br />
-                    <button onClick={props.deletePost.bind(null, Posts._id)}>Delete</button>
-                    <button onClick={props.showModal.bind(null, Posts)}>Edit</button>
+                <li key={Post._id}>
+                    <span>{Post.title}</span><br />
+                    <span>{Post.date}</span><br />
+                    <span>{Post.body}</span><br />
+                    <button onClick={props.deletePost.bind(null, Post._id)}>Delete</button>
+                    <button onClick={props.showModal.bind(null, Post)}>Edit</button>
                 </li>
             </ul>
         )
