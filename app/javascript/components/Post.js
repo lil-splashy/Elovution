@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 const Post = (props) => {
     console.log(props);
-    const postList = props.post.map((Post) => {
+    const postList = this.props.Post.map((Post) => {
         return (
             <ul>
                 <li key={Post._id}>

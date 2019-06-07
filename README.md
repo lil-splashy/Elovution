@@ -16,6 +16,6 @@ Displaying Summoner Rank from Twitch Livestreams
 
 
     NICE TO HAVE
-Able to search through Twitch Streams
+Able to search through Twitch Streams // Not possible with Twitch API
 Beautiful UX
 
