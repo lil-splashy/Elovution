@@ -5,12 +5,14 @@ import Elotracker from './Elotracker'
 import LoginRegister from './LoginRegister'
 // import Post from './Post'
 import ReactPlayer from 'react-player'
+import { Button } from 'reactstrap';
 
 
 class App extends React.Component {
     constructor() {
         super();
         this.state = {
+            LoggedIn: false,
             search: ''
         }
     }
@@ -23,6 +25,11 @@ class App extends React.Component {
         e.preventDefault();
         this.props.callSummoner(this.state);
     }
+    loginRegister = async (info) =>{
+        console.log("here is what passed into loginregister");
+        console.log(info);
+        
+    }
     render () {
         return (
         <div>
@@ -30,6 +37,7 @@ class App extends React.Component {
             <nav>
                 <a href='/login'>Login</a>
             </nav>
+                <LoginRegister />
                 <ReactPlayer url='twitch.tv/riotgames' />
             <div>
                 <Switch>

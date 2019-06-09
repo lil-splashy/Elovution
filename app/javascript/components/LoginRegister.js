@@ -25,25 +25,27 @@ class LoginRegister extends React.Component {
             })
         }
     }
-    // handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const loginResponse = await fetch('', {
-    //             method: 'POST',
-    //             credentials: 'include',
-    //             body: JSON.stringify(this.state),
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         })
-    //         const parsedResponse = await loginResponse.json();
-    //         if (parsedResponse.data === 'login successful') {
-    //             this.props.history.push('/stream')
-    //         }
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(this.state.which);
+        this.props.LoginRegister(this.state)
+        try {
+            const loginResponse = await fetch('', {
+                method: 'POST',
+                credentials: 'include',
+                body: JSON.stringify(this.state),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            const parsedResponse = await loginResponse.json();
+            if (parsedResponse.data === 'login successful') {
+                this.props.history.push('/stream')
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     render() {
         console.log(this.state);
@@ -62,7 +64,7 @@ class LoginRegister extends React.Component {
                 :
                 "Log in "
             }
-                <span onClick={this.toggle}>here!</span>
+                <span className='fake-link' onClick={this.toggle}>here!</span>
             </small>
         </div>
         )
