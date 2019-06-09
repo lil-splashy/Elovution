@@ -1,19 +1,18 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
+  adapter: postgresql
   <<: *default
-adapter: postgresql
-encoding: unicode
-database: elovution
-pool: 5
-username: 
-password: 
+  database: elovution
+
+test:
+  <<: *default
+  database: elovution
+
+
+production:
+  <<: *default
+  database: elovution

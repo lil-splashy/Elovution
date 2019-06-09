@@ -2,7 +2,7 @@ import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 import Home from './Home'
 import Elotracker from './Elotracker'
-import LoginRegister from './LoginRegister'
+// import LoginRegister from './LoginRegister'
 // import Post from './Post'
 import ReactPlayer from 'react-player'
 import { Button } from 'reactstrap';
@@ -37,13 +37,13 @@ class App extends React.Component {
             <nav>
                 <a href='/login'>Login</a>
             </nav>
-                <LoginRegister />
+                {/* <LoginRegister /> */}
                 <ReactPlayer url='twitch.tv/riotgames' />
             <div>
                 <Switch>
                     <Route exact path='/elo-tracker' component={Elotracker} />
                     {/* <Route exact path='/posts' component={Post} /> */}
-                    <Route exact path='/login' component={LoginRegister} />
+                    {/* <Route exact path='/login' component={LoginRegister} /> */}
                     <Route exact path='/' component={Home} />
                 </Switch>
             </div>
